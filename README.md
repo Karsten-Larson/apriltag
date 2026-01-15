@@ -1,20 +1,26 @@
-apriltag
-========
+# apriltag
 
-Small modifications/additions to  http://april.eecs.umich.edu/media/apriltag/apriltag-2015-03-18.tgz
+## Quick Install
+
+This is a quick install script that builds the apriltag library and the python wrapper and installs them onto your system.
+
+```
+source ./build_apriltag.sh
+```
+
+---
+
+Small modifications/additions to http://april.eecs.umich.edu/media/apriltag/apriltag-2015-03-18.tgz
 
 Added a new quad detector and a few various speedups.
 
-***Please note:*** I am not the maintainer of the pypi package listed at https://pypi.org/project/apriltag/ – GitHub issues filed here reporting problems with that package will be summarily closed. Sorry, I don't have time to support someone else's unofficial package.
+**_Please note:_** I am not the maintainer of the pypi package listed at https://pypi.org/project/apriltag/ – GitHub issues filed here reporting problems with that package will be summarily closed. Sorry, I don't have time to support someone else's unofficial package.
 
+# Dependencies
 
-Dependencies
-============
+- OpenCV (optional)
 
-  - OpenCV (optional)
-
-Building
-========
+# Building
 
     cd /path/to/apriltag
     mkdir build
@@ -26,8 +32,7 @@ If you want to install the library and important binaries to your system directo
 
     sudo make install
 
-Running
-=======
+# Running
 
 You can run `aprilag_opencv_demo` to do stuff, run with `-h` to get help.
 
@@ -38,13 +43,12 @@ So for example, you can run
 
 to benchmark the new code against the old code.
 
-Python
-======
+# Python
 
-***Note that you must build the software per the instructions above before the Python wrapper can 
-be used.*** If you did not install the libraries to the system-wide library directory and you 
+**_Note that you must build the software per the instructions above before the Python wrapper can
+be used._** If you did not install the libraries to the system-wide library directory and you
 are not running Python code from the python directory in this repository, your Python code
-must specify the  path for the apriltag shared library when constructing an
+must specify the path for the apriltag shared library when constructing an
 `apriltag.Detector` object.
 
 I recently added the ability to estimate 3D tag poses to the Python wrapper.
