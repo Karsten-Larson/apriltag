@@ -2,3 +2,7 @@
 build
 .DS_Store
 *.pyc
+dist
+__pycache__/
+*.egg-info
+*.so

@@ -284,6 +284,9 @@ library used by ctypes.
         self.libc = None
         self.tag_detector = None
 
+        if not searchpath:
+            searchpath = [os.path.dirname(__file__)]
+
         for path in searchpath:
             relpath = os.path.join(path, filename)
             if os.path.exists(relpath):
